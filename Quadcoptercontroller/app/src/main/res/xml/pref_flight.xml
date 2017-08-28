@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:sample="http://schemas.android.com/apk/res-auto">
+    <com.pavelsikun.seekbarpreference.SeekBarPreference
+        android:defaultValue="100"
+        android:enabled="true"
+        android:key="@string/pref_key_minimal_upper_distance"
+        android:summary="@string/pref_description_minimal_upper_distance"
+        android:title="@string/pref_title_minimal_upper_distance"
+        sample:msbp_interval="5"
+        sample:msbp_maxValue="640"
+        sample:msbp_measurementUnit="cm"
+        sample:msbp_minValue="10"
+        />
+
+    <com.pavelsikun.seekbarpreference.SeekBarPreference
+        android:defaultValue="100"
+        android:enabled="true"
+        android:key="@string/pref_key_minimal_below_distance"
+        android:summary="@string/pref_description_minimal_below_distance"
+        android:title="@string/pref_title_minimal_below_distance"
+        sample:msbp_interval="5"
+        sample:msbp_maxValue="640"
+        sample:msbp_measurementUnit="cm"
+        sample:msbp_minValue="10"
+        />
+
+    <com.pavelsikun.seekbarpreference.SeekBarPreference
+        android:defaultValue="100"
+        android:enabled="true"
+        android:key="@string/pref_key_minimal_side_distance"
+        android:summary="@string/pref_description_minimal_side_distance"
+        android:title="@string/pref_title_minimal_side_distance"
+        sample:msbp_interval="5"
+        sample:msbp_maxValue="640"
+        sample:msbp_measurementUnit="cm"
+        sample:msbp_minValue="10"
+        />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/pref_key_lock_altitude"
+        android:summary="@string/pref_description_lock_altitude"
+        android:title="@string/pref_title_lock_altitude"/>
+
+    <com.pavelsikun.seekbarpreference.SeekBarPreference
+        android:defaultValue="100"
+        android:enabled="true"
+        android:key="@string/pref_key_maximum_altitude"
+        android:summary="@string/pref_description_maximum_altitude"
+        android:title="@string/pref_title_maximum_altitude"
+        sample:msbp_interval="5"
+        sample:msbp_maxValue="640"
+        sample:msbp_measurementUnit="cm"
+        sample:msbp_minValue="10"
+        />
+
+    <com.pavelsikun.seekbarpreference.SeekBarPreference
+        android:defaultValue="5"
+        android:enabled="true"
+        android:key="@string/pref_key_maximum_inclination"
+        android:summary="@string/pref_description_maximum_inclination"
+        android:title="@string/pref_title_maximum_inclination"
+        sample:msbp_interval="1"
+        sample:msbp_maxValue="20"
+        sample:msbp_measurementUnit="°"
+        sample:msbp_minValue="1"
+        />
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:key="maximum_speed"-->
+    <!--android:title="@string/pref_title_maximum_speed"-->
+    <!--android:summary="@string/pref_description_maximum_speed"-->
+    <!--android:enabled="true"-->
+    <!--android:defaultValue="1"-->
+    <!--sample:msbp_minValue="1"-->
+    <!--sample:msbp_maxValue="5"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_measurementUnit="m/s"-->
+    <!--/>-->
+</PreferenceScreen>

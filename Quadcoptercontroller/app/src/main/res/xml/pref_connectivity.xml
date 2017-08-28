@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:sample="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference
+        android:key="@string/pref_key_act_as_client"
+        android:title="@string/pref_title_act_as_client"
+        android:summary="@string/pref_description_act_as_client"
+        android:defaultValue="false"/>
+
+    <EditTextPreference
+        android:key="@string/pref_key_server_ipv4_address"
+        android:title="@string/pref_title_server_ipv4_address"
+        android:hint="@string/pref_hint_dialog_server_ipv4"
+        android:persistent="true"
+        android:inputType="phone"
+        android:dependency="@string/pref_key_act_as_client"
+        android:dialogTitle="@string/pref_title_server_ipv4_address"
+        android:dialogMessage="@string/pref_message_dialog_server_ipv4"
+        android:defaultValue="" />
+
+    <com.pavelsikun.seekbarpreference.SeekBarPreference
+        android:defaultValue="7171"
+        android:enabled="true"
+        android:key="@string/pref_key_server_port"
+        android:summary="@string/pref_description_server_port"
+        android:title="@string/pref_title_server_port"
+        sample:msbp_interval="1"
+        sample:msbp_maxValue="65535"
+        sample:msbp_minValue="1024"
+        />
+</PreferenceScreen>

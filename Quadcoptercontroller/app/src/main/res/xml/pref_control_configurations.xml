@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:sample="http://schemas.android.com/apk/res-auto">
+    <com.pavelsikun.seekbarpreference.SeekBarPreference
+        android:defaultValue="500"
+        android:enabled="true"
+        android:key="@string/pref_key_control_min_throttle_perTenThousand"
+        android:summary="@string/pref_description_control_min_throttle_perTenThousand"
+        android:title="@string/pref_title_control_min_throttle_perTenThousand"
+        sample:msbp_interval="1"
+        sample:msbp_maxValue="1300"
+        sample:msbp_measurementUnit="‱"
+        sample:msbp_minValue="0"
+        />
+
+    <com.pavelsikun.seekbarpreference.SeekBarPreference
+        android:defaultValue="2500"
+        android:enabled="true"
+        android:key="@string/pref_key_control_max_throttle_perTenThousand"
+        android:summary="@string/pref_description_control_max_throttle_perTenThousand"
+        android:title="@string/pref_title_control_max_throttle_perTenThousand"
+        sample:msbp_interval="1"
+        sample:msbp_maxValue="10000"
+        sample:msbp_measurementUnit="‱"
+        sample:msbp_minValue="2150"
+        />
+
+    <PreferenceCategory
+        android:key="pref_key_rsc"
+        android:title="@string/pref_category_title_rsc">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_rsc_enable"
+            android:title="@string/pref_title_enable_control"/>
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="500"
+            android:enabled="true"
+            android:key="@string/pref_key_rsc_throttle_base_value_perTenThousand"
+            android:summary="@string/pref_description_rsc_throttle_base_value_perTenThousand"
+            android:title="@string/pref_title_rsc_throttle_base_value_perTenThousand"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="10000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_rsc_proportional_coefficient"
+            android:title="@string/pref_title_proportional_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_rsc_integrative_coefficient"
+            android:title="@string/pref_title_integrative_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_rsc_derivative_coefficient"
+            android:title="@string/pref_title_derivative_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+    </PreferenceCategory>
+
+
+    <!--<PreferenceCategory-->
+    <!--android:title="@string/pref_category_title_rotor1_rotation_control"-->
+    <!--android:key="pref_key_rotor1_rotation_control">-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor1_proportional_coefficient"-->
+    <!--android:title="@string/pref_title_proportional_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor1_integrative_coefficient"-->
+    <!--android:title="@string/pref_title_integrative_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor1_derivative_coefficient"-->
+    <!--android:title="@string/pref_title_derivative_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+    <!--</PreferenceCategory>-->
+
+    <!--<PreferenceCategory-->
+    <!--android:title="@string/pref_category_title_rotor2_rotation_control"-->
+    <!--android:key="pref_key_rotor2_rotation_control">-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor2_proportional_coefficient"-->
+    <!--android:title="@string/pref_title_proportional_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor2_integrative_coefficient"-->
+    <!--android:title="@string/pref_title_integrative_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor2_derivative_coefficient"-->
+    <!--android:title="@string/pref_title_derivative_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+    <!--</PreferenceCategory>-->
+
+    <!--<PreferenceCategory-->
+    <!--android:title="@string/pref_category_title_rotor3_rotation_control"-->
+    <!--android:key="pref_key_rotor3_rotation_control">-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor3_proportional_coefficient"-->
+    <!--android:title="@string/pref_title_proportional_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor3_integrative_coefficient"-->
+    <!--android:title="@string/pref_title_integrative_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor3_derivative_coefficient"-->
+    <!--android:title="@string/pref_title_derivative_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+    <!--</PreferenceCategory>-->
+
+    <!--<PreferenceCategory-->
+    <!--android:title="@string/pref_category_title_rotor4_rotation_control"-->
+    <!--android:key="pref_key_rotor4_rotation_control">-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor4_proportional_coefficient"-->
+    <!--android:title="@string/pref_title_proportional_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor4_integrative_coefficient"-->
+    <!--android:title="@string/pref_title_integrative_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+
+    <!--<com.pavelsikun.seekbarpreference.SeekBarPreference-->
+    <!--android:defaultValue="100"-->
+    <!--android:enabled="true"-->
+    <!--android:key="@string/pref_key_rotor4_derivative_coefficient"-->
+    <!--android:title="@string/pref_title_derivative_coefficient"-->
+    <!--sample:msbp_interval="1"-->
+    <!--sample:msbp_maxValue="1000000"-->
+    <!--sample:msbp_measurementUnit="‱"-->
+    <!--sample:msbp_minValue="0"-->
+    <!--/>-->
+    <!--</PreferenceCategory>-->
+
+    <PreferenceCategory
+        android:key="pref_key_atc"
+        android:title="@string/pref_category_title_atc">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_atc_enable"
+            android:title="@string/pref_title_enable_control"/>
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_atc_proportional_coefficient"
+            android:title="@string/pref_title_proportional_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_atc_integrative_coefficient"
+            android:title="@string/pref_title_integrative_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_atc_derivative_coefficient"
+            android:title="@string/pref_title_derivative_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_key_hrc"
+        android:title="@string/pref_category_title_hrc">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_hrc_enable"
+            android:title="@string/pref_title_enable_control"/>
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_hrc_proportional_coefficient"
+            android:title="@string/pref_title_proportional_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_hrc_integrative_coefficient"
+            android:title="@string/pref_title_integrative_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_hrc_derivative_coefficient"
+            android:title="@string/pref_title_derivative_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_key_alc"
+        android:title="@string/pref_category_title_alc">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_alc_enable"
+            android:title="@string/pref_title_enable_control"/>
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_alc_proportional_coefficient"
+            android:title="@string/pref_title_proportional_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_alc_integrative_coefficient"
+            android:title="@string/pref_title_integrative_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="100"
+            android:enabled="true"
+            android:key="@string/pref_key_alc_derivative_coefficient"
+            android:title="@string/pref_title_derivative_coefficient"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="1000000"
+            sample:msbp_measurementUnit="‱"
+            sample:msbp_minValue="0"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>

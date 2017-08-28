@@ -1,0 +1,30 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="com.example.gildo.quadcoptercontroller.activities.SettingsActivity$FlightPreferenceFragment"
+        android:icon="@drawable/ic_flight"
+        android:title="@string/pref_header_flight"/>
+
+    <header
+        android:fragment="com.example.gildo.quadcoptercontroller.activities.SettingsActivity$DevicesPreferenceFragment"
+        android:icon="@drawable/ic_devices"
+        android:title="@string/pref_header_devices"/>
+
+    <header
+        android:fragment="com.example.gildo.quadcoptercontroller.activities.SettingsActivity$ControlConfigurationsPreferenceFragment"
+        android:icon="@drawable/ic_control_configurations"
+        android:title="@string/pref_header_control_configurations"/>
+
+    <header
+        android:fragment="com.example.gildo.quadcoptercontroller.activities.SettingsActivity$ConnectivityPreferenceFragment"
+        android:icon="@drawable/ic_connectivity"
+        android:title="@string/pref_header_connectivity"/>
+
+    <header
+        android:fragment="com.example.gildo.quadcoptercontroller.activities.SettingsActivity$LogPreferenceFragment"
+        android:icon="@drawable/ic_logs"
+        android:title="@string/pref_header_logs"/>
+
+</preference-headers>

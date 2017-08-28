@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '26.0.1'
+
+    defaultConfig {
+        applicationId "com.example.gildo.quadcoptercontroller"
+        minSdkVersion 22
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+//            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+//A versão das bibliotecas do android foi trocada de 23.2.0 para 23.1.0, pois a versão 23.2.0 tá
+// bugada para Floating Action Button
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    //Material SeekBarPreference (Android Arsenal)
+    //compile 'com.pavelsikun:material-seekbar-preference:0.12.1'
+    //Vertical seekbar (Android Arsenal)
+    //compile 'com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:0.6.0'
+    //Bugstick, joystick com padrão material (Android Arsenal)
+    //compile 'com.jmedeisis:bugstick:0.2.2'
+    //HelloCharts (Android Arsenal)
+    //compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    //Added for IOIO support
+    //compile 'com.github.ytai.ioio:IOIOLibAndroid:5.05'
+    //compile 'com.github.ytai.ioio:IOIOLibAndroidBluetooth:5.05'
+    //compile 'com.github.ytai.ioio:IOIOLibAndroidAccessory:5.05'
+    //compile 'com.github.ytai.ioio:IOIOLibAndroidDevice:5.05'
+
+//    compile 'com.android.support:appcompat-v7:23.3.0'
+//    compile 'com.android.support:design:23.3.0'
+//    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.pavelsikun:material-seekbar-preference:2.3.0'
+    compile 'com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:0.7.0'
+    compile 'com.jmedeisis:bugstick:0.2.2'
+    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    compile 'com.github.ytai.ioio:IOIOLibAndroid:5.07'
+    compile 'com.github.ytai.ioio:IOIOLibAndroidBluetooth:5.07'
+    compile 'com.github.ytai.ioio:IOIOLibAndroidAccessory:5.07'
+    compile 'com.github.ytai.ioio:IOIOLibAndroidDevice:5.07'
+}
+
+repositories {
+    jcenter()
+    mavenCentral() //Added for IOIO support
+    maven { url "https://jitpack.io" } //Material SeekBarPreference and Bugstick
+}

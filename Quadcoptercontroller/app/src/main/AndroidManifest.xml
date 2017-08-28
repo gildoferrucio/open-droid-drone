@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.gildo.quadcoptercontroller">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Permissions to use bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!-- Permissions to use GPS or location services -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- Permissions to manipulate external storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-library
+            android:name="com.android.future.usb.accessory"
+            android:required="false"/>
+
+        <activity
+            android:name=".activities.StartActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/accessory_filter"/>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter"/>
+        </activity>
+        <activity
+            android:name=".activities.AutoControlActivity"
+            android:label="@string/title_activity_auto_control"
+            android:parentActivityName=".activities.StartActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.StartActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.DevicesTestsActivity"
+            android:label="@string/title_activity_devices_tests"
+            android:parentActivityName=".activities.StartActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.StartActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".activities.StartActivity"
+            android:screenOrientation="sensorPortrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.StartActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.ManualControlActivity"
+            android:label="@string/title_activity_manual_control"
+            android:parentActivityName=".activities.StartActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.StartActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.TestsExecutorActivity"
+            android:label="@string/title_activity_tests_executor"
+            android:parentActivityName=".activities.DevicesTestsActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.DevicesTestsActivity"/>
+        </activity>
+
+        <!--IOIO Service-->
+        <service
+            android:name=".services.communication.IOIOControllerService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <!--Communication Service-->
+        <service
+            android:name=".services.communication.UDPConnectionService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <!--Sensory Interpretation Service-->
+        <service
+            android:name=".services.SensoryInterpretationService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <!--Control Services-->
+        <service
+            android:name=".services.control.AltitudeControlService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <service
+            android:name=".services.control.AttitudeControlService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <service
+            android:name=".services.control.HorizontalRotationControlService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <service
+            android:name=".services.control.RotorSpeedControlService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+    </application>
+</manifest>

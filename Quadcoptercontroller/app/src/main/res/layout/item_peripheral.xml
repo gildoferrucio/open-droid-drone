@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+    <!--android:padding="@dimen/activity_horizontal_margin">-->
+    <ImageView
+        android:id="@+id/imageView_peripheric_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@android:drawable/sym_def_app_icon"
+        android:padding="5sp"/>
+    <!--android:padding="@dimen/activity_horizontal_margin"-->
+
+    <LinearLayout
+        android:id="@+id/peripheric_contents_envelope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10sp"
+        android:layout_alignTop="@id/imageView_peripheric_icon"
+        android:layout_toRightOf="@id/imageView_peripheric_icon"
+        android:layout_toEndOf="@id/imageView_peripheric_icon"
+        android:layout_alignBottom="@id/imageView_peripheric_icon"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textView_peripheric_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/peripheral_name"
+            android:textAppearance="?android:textAppearanceListItem"
+            android:textColor="@color/materialGrey900"/>
+            <!--android:layout_alignTop="@+id/imageView_peripheral"-->
+            <!--android:layout_toRightOf="@+id/imageView_peripheral"-->
+            <!--android:layout_toEndOf="@+id/imageView_peripheral"/>-->
+
+        <TextView
+            android:id="@+id/textView_peripheric_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/peripheral_description"
+            android:textAppearance="?android:textAppearanceListItemSecondary"
+            android:textColor="@color/black_overlay"/>
+            <!--android:layout_below="@+id/textView_peripheral_name"-->
+            <!--android:layout_toRightOf="@+id/imageView_peripheral"-->
+            <!--android:layout_toEndOf="@+id/imageView_peripheral"/>-->
+    </LinearLayout>
+
+</RelativeLayout>

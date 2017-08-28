@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.ManualControlActivity"
+    tools:showIn="@layout/activity_manual_control">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_flight_controls"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:id="@+id/joystick_inclination_envelope"
+            android:layout_width="100sp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.65"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_lock_joystick_inclination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_lock_joystick_inclination_none"
+                android:textAppearance="?android:textAppearanceSmall"/>
+
+            <com.jmedeisis.bugstick.Joystick
+                android:id="@+id/joystick_inclination"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background_stick_base"
+                app:force_square="true"
+                app:start_on_first_touch="false">
+
+                <!-- You may use any View here. -->
+                <Button
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:background="@drawable/background_stick_head"/>
+            </com.jmedeisis.bugstick.Joystick>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+
+        <LinearLayout
+            android:id="@+id/buttons_envelope"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_connection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15sp"
+                android:text="@string/button_connection_connect_vant"
+                android:textAppearance="?android:textAppearanceSmall"/>
+            <!--android:textAllCaps="true"-->
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"/>
+
+            <Button
+                android:id="@+id/button_get_closer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15sp"
+                android:text="@string/button_get_closer"
+                android:textAppearance="?android:textAppearanceSmall"/>
+            <!--android:textAllCaps="true"-->
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"/>
+
+            <Button
+                android:id="@+id/button_start_stop_rotors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15sp"
+                android:text="@string/button_start_rotors"
+                android:textAppearance="?android:textAppearanceSmall"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"/>
+
+            <LinearLayout
+                android:id="@+id/emergencyStop_envelope_manual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/button_emergency_stop_manual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FF0000"
+                    android:padding="15sp"
+                    android:text="@string/button_emergency_stop"
+                    android:textAllCaps="true"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+                <!--android:background="@drawable/background_round_button"-->
+                <!--android:background="#FF0000"-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+
+        <LinearLayout
+            android:id="@+id/verticalSeekBar_envelope"
+            android:layout_width="230sp"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_inputs_from_controller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/inputs_from_controller"/>
+
+            <SeekBar
+                android:id="@+id/seekBar_steering"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="15000"
+                android:progress="7500"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35sp"/>
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                android:layout_width="50sp"
+                android:layout_height="fill_parent">
+                <!--android:layout_width="50sp"-->
+                <!--android:layout_height="fill_parent"-->
+
+                <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                    android:id="@+id/verticalSeekBar_throttle_manualControl"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:max="15000"
+                    android:progress="0"
+                    app:seekBarRotation="CW270"/>
+                <!-- Rotation: CW90 or CW270 -->
+            </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+        </LinearLayout>
+
+        <!--<View-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="0.05"/>-->
+    </LinearLayout>
+</RelativeLayout>

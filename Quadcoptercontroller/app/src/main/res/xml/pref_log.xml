@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:key="@string/pref_key_enable_sensory_logs"
+        android:title="@string/pref_title_enable_sensory_logs"
+        android:summary="@string/pref_description_enable_sensory_logs"
+        android:defaultValue="false"/>
+
+    <SwitchPreference
+        android:key="@string/pref_key_enable_device_tests_logs"
+        android:title="@string/pref_title_enable_device_tests_logs"
+        android:summary="@string/pref_description_enable_device_tests_logs"
+        android:defaultValue="false"/>
+
+    <SwitchPreference
+        android:key="@string/pref_key_enable_rsc_logs"
+        android:title="@string/pref_title_enable_rsc_logs"
+        android:summary="@string/pref_description_enable_rsc_logs"
+        android:defaultValue="false"/>
+
+    <SwitchPreference
+        android:key="@string/pref_key_enable_atc_logs"
+        android:title="@string/pref_title_enable_atc_logs"
+        android:summary="@string/pref_description_enable_atc_logs"
+        android:defaultValue="false"/>
+
+    <SwitchPreference
+        android:key="@string/pref_key_enable_hrc_logs"
+        android:title="@string/pref_title_enable_hrc_logs"
+        android:summary="@string/pref_description_enable_hrc_logs"
+        android:defaultValue="false"/>
+
+    <SwitchPreference
+        android:key="@string/pref_key_enable_alc_logs"
+        android:title="@string/pref_title_enable_alc_logs"
+        android:summary="@string/pref_description_enable_alc_logs"
+        android:defaultValue="false"/>
+
+    <ListPreference
+        android:key="@string/pref_key_log_path"
+        android:title="@string/pref_title_log_path"
+        android:summary="@string/pref_description_log_path"
+        android:dialogTitle="@string/pref_title_log_path"
+        android:enabled="false"
+        android:entries="@array/pref_log_path_titles"
+        android:entryValues="@array/pref_log_path_values"
+        android:defaultValue="@string/pref_log_path_default"/>
+    <!--android:dependency="@string/pref_key_enable_logs"-->
+</PreferenceScreen>

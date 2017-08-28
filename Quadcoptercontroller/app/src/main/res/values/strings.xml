@@ -1,0 +1,657 @@
+<resources>
+    <string name="app_name">Quadcopter Controller</string>
+
+    <!-- Strings related to Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="menu_auto_control">Controle automático</string>
+    <string name="menu_devices_tests">Testar dispositivos</string>
+    <string name="menu_manual_control">Controle manual</string>
+    <string name="menu_settings">Configurações</string>
+    <string name="menu_exit">Sair</string>
+
+    <!--<string name="action_settings">Settings</string>-->
+
+    <!-- Strings related to Start activity -->
+    <!--<string name="button_start_services_and_check_permissions">Iniciar serviços e checar permissões</string>-->
+
+    <!-- Strings related to Settings activity -->
+    <string name="title_activity_settings">Configurações</string>
+
+    <!-- Strings related to Flight Settings -->
+    <string name="pref_header_flight">Voo</string>
+
+    <string name="pref_key_minimal_upper_distance">pref_key_minimal_upper_distance</string>
+    <string name="pref_title_minimal_upper_distance">Distância mínima superior</string>
+    <string name="pref_description_minimal_upper_distance">Distância mínima de objetos
+        acima do VANT
+    </string>
+
+    <string name="pref_key_minimal_below_distance">pref_key_minimal_below_distance</string>
+    <string name="pref_title_minimal_below_distance">Distância mínima inferior</string>
+    <string name="pref_description_minimal_below_distance">Distância mínima de objetos
+        abaixo do VANT
+    </string>
+
+    <string name="pref_key_minimal_side_distance">pref_key_minimal_side_distance</string>
+    <string name="pref_title_minimal_side_distance">Distância mínima lateral</string>
+    <string name="pref_description_minimal_side_distance">Distância mínima de objetos nas
+        laterais do VANT
+    </string>
+
+    <string name="pref_key_lock_altitude">pref_key_lock_altitude</string>
+    <string name="pref_title_lock_altitude">Travar altitude</string>
+    <string name="pref_description_lock_altitude">Manter a altitude de voo fixa na altitude máxima</string>
+
+    <string name="pref_key_maximum_altitude">pref_key_maximum_altitude</string>
+    <string name="pref_title_maximum_altitude">Altitude máxima</string>
+    <string name="pref_description_maximum_altitude">Altitude máxima de voo</string>
+
+    <string name="pref_key_maximum_inclination">pref_key_maximum_inclination</string>
+    <string name="pref_title_maximum_inclination">Inclinação máxima</string>
+    <string name="pref_description_maximum_inclination">Inclinação máxima do VANT</string>
+
+    <!--<string name="pref_title_maximum_speed">Velocidade máxima</string>-->
+    <!--<string name="pref_description_maximum_speed">Velocidade linear máxima</string>-->
+
+    <!-- Strings related to Devices Settings -->
+    <string name="pref_header_devices">Dispositivos</string>
+
+    <string name="pref_title_alpha_attitude_sensor">Coeficiente do sensor de atitude</string>
+    <string name="pref_key_alpha_attitude_sensor">pref_key_alpha_attitude_sensor</string>
+    <string name="pref_description_alpha_attitude_sensor">Coeficiente do filtro complementar do sensor de atitude</string>
+
+    <string name="pref_title_alpha_horizontal_rotation_sensor">Coeficiente do sensor de rotação horizontal</string>
+    <string name="pref_key_alpha_horizontal_rotation_sensor">pref_key_alpha_horizontal_rotation_sensor</string>
+    <string name="pref_description_alpha_horizontal_rotation_sensor">Coeficiente do filtro complementar do sensor de
+        rotação horizontal</string>
+
+    <string name="pref_key_lpf_accelerometer_enable">pref_key_lpf_accelerometer_enable</string>
+    <string name="pref_title_lpf_accelerometer_enable">Filtrar o acelerômetro</string>
+    <string name="pref_description_lpf_accelerometer_enable">Habilita o filtro LPF das leituras do acelerômetro</string>
+
+    <string name="pref_title_alpha_lpf_accelerometer">Coeficiente do LPF do acelerômetro</string>
+    <string name="pref_key_alpha_lpf_accelerometer">pref_key_alpha_lpf_accelerometer</string>
+    <string name="pref_description_alpha_lpf_accelerometer">Fator de atenuação (alfa) do filtro passa baixa do acelerômetro</string>
+
+    <string name="pref_key_gyroscope_remove_offset_enable">pref_key_gyroscope_remove_offset_enable</string>
+    <string name="pref_title_gyroscope_remove_offset_enable">Remoção de offset do giroscópio</string>
+    <string name="pref_description_gyroscope_remove_offset_enable">Subtrai o offset das leituras do giroscópio</string>
+
+    <string name="pref_key_hpf_gyroscope_enable">pref_key_hpf_gyroscope_enable</string>
+    <string name="pref_title_hpf_gyroscope_enable">Filtrar o giroscópio</string>
+    <string name="pref_description_hpf_gyroscope_enable">Habilita o filtro HPF das leituras do giroscópio</string>
+
+    <string name="pref_title_alpha_hpf_gyroscope">Coeficiente do HPF do giroscópio</string>
+    <string name="pref_key_alpha_hpf_gyroscope">pref_key_alpha_hpf_gyroscope</string>
+    <string name="pref_description_alpha_hpf_gyroscope">Fator de atenuação (alfa) do filtro passa alta do giroscópio</string>
+
+    <string name="pref_key_magnetometer_remove_offset_enable">pref_key_magnetometer_remove_offset_enable</string>
+    <string name="pref_title_magnetometer_remove_offset_enable">Remoção de offset do magnetômetro</string>
+    <string name="pref_description_magnetometer_remove_offset_enable">Subtrai o offset das leituras do magnetômetro</string>
+
+    <string name="pref_key_lpf_magnetometer_enable">pref_key_lpf_magnetometer_enable</string>
+    <string name="pref_title_lpf_magnetometer_enable">Filtrar o magnetômetro</string>
+    <string name="pref_description_lpf_magnetometer_enable">Habilita o filtro LPF das leituras do magnetômetro</string>
+
+    <string name="pref_title_alpha_lpf_magnetometer">Coeficiente do LPF do magnetômetro</string>
+    <string name="pref_key_alpha_lpf_magnetometer">pref_key_alpha_lpf_magnetometer</string>
+    <string name="pref_description_alpha_lpf_magnetometer">Fator de atenuação (alfa) do filtro passa baixa do magnetômetro</string>
+
+    <string name="pref_key_maf_tachometer_enable">pref_key_maf_tachometer_enable</string>
+    <string name="pref_title_maf_tachometer_enable">Filtrar os tacômetros</string>
+    <string name="pref_description_maf_tachometer_enable">Habilita o filtro de média móvel em valores nulos das leituras dos tacômetros</string>
+
+    <string name="pref_category_title_fused_sensors">Fusão de sensores</string>
+    <string name="pref_category_title_sensors_pre_processing">Pré-processamento dos sensores</string>
+    <string name="pref_category_title_escs">ESCs</string>
+    <string name="pref_category_title_tachometers">Tacômetros</string>
+    <string name="pref_category_title_sonars">Sonares</string>
+    <string name="pref_category_title_inertial_sensors">Sensores inerciais</string>
+
+    <string name="pref_key_esc1_enable">pref_key_esc1_enable</string>
+    <string name="pref_key_esc2_enable">pref_key_esc2_enable</string>
+    <string name="pref_key_esc3_enable">pref_key_esc3_enable</string>
+    <string name="pref_key_esc4_enable">pref_key_esc4_enable</string>
+
+    <string name="pref_key_tachometer1_enable">pref_key_tachometer1_enable</string>
+    <string name="pref_key_tachometer2_enable">pref_key_tachometer2_enable</string>
+    <string name="pref_key_tachometer3_enable">pref_key_tachometer3_enable</string>
+    <string name="pref_key_tachometer4_enable">pref_key_tachometer4_enable</string>
+
+    <string name="pref_key_sonarE_enable">pref_key_sonarE_enable</string>
+    <string name="pref_key_sonarNE_enable">pref_key_sonarNE_enable</string>
+    <string name="pref_key_sonarN_enable">pref_key_sonarN_enable</string>
+    <string name="pref_key_sonarNW_enable">pref_key_sonarNW_enable</string>
+    <string name="pref_key_sonarW_enable">pref_key_sonarW_enable</string>
+    <string name="pref_key_sonarSW_enable">pref_key_sonarSW_enable</string>
+    <string name="pref_key_sonarS_enable">pref_key_sonarS_enable</string>
+    <string name="pref_key_sonarSE_enable">pref_key_sonarSE_enable</string>
+    <string name="pref_key_sonarUp_enable">pref_key_sonarUp_enable</string>
+    <string name="pref_key_sonarDown_enable">pref_key_sonarDown_enable</string>
+
+    <string name="pref_key_barometer_enable">pref_key_barometer_enable</string>
+    <string name="pref_key_accelerometer_enable">pref_key_accelerometer_enable</string>
+    <string name="pref_key_gyroscope_enable">pref_key_gyroscope_enable</string>
+    <string name="pref_key_magnetometer_enable">pref_key_magnetometer_enable</string>
+
+    <string name="pref_description_esc_enable">Habilita o ESC</string>
+    <string name="pref_description_tachometer_enable">Habilita o tacômetro</string>
+    <string name="pref_description_sonar_enable">Habilita o sonar</string>
+    <string name="pref_description_barometer_enable">Habilita o barômetro</string>
+    <string name="pref_description_accelerometer_enable">Habilita o acelerômetro</string>
+    <string name="pref_description_gyroscope_enable">Habilita o giroscópio</string>
+    <string name="pref_description_magnetometer_enable">Habilita o magnetômetro</string>
+
+    <string name="pref_title_esc1_enable">ESC 1</string>
+    <string name="pref_title_esc2_enable">ESC 2</string>
+    <string name="pref_title_esc3_enable">ESC 3</string>
+    <string name="pref_title_esc4_enable">ESC 4</string>
+
+    <string name="pref_title_tachometer1_enable">Tacômetro 1</string>
+    <string name="pref_title_tachometer2_enable">Tacômetro 2</string>
+    <string name="pref_title_tachometer3_enable">Tacômetro 3</string>
+    <string name="pref_title_tachometer4_enable">Tacômetro 4</string>
+
+    <string name="pref_title_sonarE_enable">Sonar E</string>
+    <string name="pref_title_sonarNE_enable">Sonar NE</string>
+    <string name="pref_title_sonarN_enable">Sonar N</string>
+    <string name="pref_title_sonarNW_enable">Sonar NW</string>
+    <string name="pref_title_sonarW_enable">Sonar W</string>
+    <string name="pref_title_sonarSW_enable">Sonar SW</string>
+    <string name="pref_title_sonarS_enable">Sonar S</string>
+    <string name="pref_title_sonarSE_enable">Sonar SE</string>
+    <string name="pref_title_sonarUp_enable">Sonar superior</string>
+    <string name="pref_title_sonarDown_enable">Sonar inferior</string>
+
+    <string name="pref_title_barometer_enable">Barômetro</string>
+    <string name="pref_title_accelerometer_enable">Acelerômetro</string>
+    <string name="pref_title_gyroscope_enable">Giroscópio</string>
+    <string name="pref_title_magnetometer_enable">Magnetômetro</string>
+
+    <!-- Strings related to Control Settings -->
+    <string name="pref_category_title_rsc">Controle de rotação do rotor</string>
+
+    <!--<string name="pref_category_title_rotor1_rotation_control">Controle de rotação do rotor 1</string>-->
+    <!--<string name="pref_category_title_rotor2_rotation_control">Controle de rotação do rotor 2</string>-->
+    <!--<string name="pref_category_title_rotor3_rotation_control">Controle de rotação do rotor 3</string>-->
+    <!--<string name="pref_category_title_rotor4_rotation_control">Controle de rotação do rotor 4</string>-->
+    <string name="pref_category_title_atc">Controle de atitude</string>
+    <string name="pref_category_title_hrc">Controle de rotação horizontal</string>
+    <string name="pref_category_title_alc">Controle de altitude</string>
+
+    <string name="pref_key_control_max_throttle_perTenThousand">pref_key_control_max_throttle_perTenThousand</string>
+    <string name="pref_description_control_max_throttle_perTenThousand">Percentual do sinal de aceleração máxima para todos os algoritmos de controle</string>
+    <string name="pref_title_control_max_throttle_perTenThousand">Acelerador máximo para os controles</string>
+
+    <string name="pref_key_control_min_throttle_perTenThousand">pref_key_control_min_throttle_perTenThousand</string>
+    <string name="pref_description_control_min_throttle_perTenThousand">Percentual do sinal de aceleração mínima para todos os algoritmos de controle</string>
+    <string name="pref_title_control_min_throttle_perTenThousand">Acelerador mínimo para os controles</string>
+
+    <string name="pref_key_rsc_enable">pref_key_rsc_enable</string>
+    <string name="pref_key_rsc_throttle_base_value_perTenThousand">pref_key_rsc_throttle_base_value_perTenThousand</string>
+    <string name="pref_title_rsc_throttle_base_value_perTenThousand">Valor base do acelerador</string>
+    <string name="pref_description_rsc_throttle_base_value_perTenThousand">Valor base do acelerador utilizado no controle de rotação dos motores</string>
+
+    <string name="pref_key_rsc_proportional_coefficient">pref_key_rsc_proportional_coefficient</string>
+    <string name="pref_key_rsc_integrative_coefficient">pref_key_rsc_integrative_coefficient</string>
+    <string name="pref_key_rsc_derivative_coefficient">pref_key_rsc_derivative_coefficient</string>
+
+    <string name="pref_key_minimum_rotation_throttle_perTenThousand">pref_key_minimum_rotation_throttle_perTenThousand</string>
+    <string name="pref_title_minimum_rotation_throttle_perTenThousand">Rotação mínima</string>
+    <string name="pref_description_minimum_rotation_throttle_perTenThousand">Inclinação máxima do VANT</string>
+
+    <!--<string name="pref_key_rotor1_proportional_coefficient">pref_key_rotor1_proportional_coefficient</string>-->
+    <!--<string name="pref_key_rotor1_integrative_coefficient">pref_key_rotor1_integrative_coefficient</string>-->
+    <!--<string name="pref_key_rotor1_derivative_coefficient">pref_key_rotor1_derivative_coefficient</string>-->
+
+    <!--<string name="pref_key_rotor2_proportional_coefficient">pref_key_rotor2_proportional_coefficient</string>-->
+    <!--<string name="pref_key_rotor2_integrative_coefficient">pref_key_rotor2_integrative_coefficient</string>-->
+    <!--<string name="pref_key_rotor2_derivative_coefficient">pref_key_rotor2_derivative_coefficient</string>-->
+
+    <!--<string name="pref_key_rotor3_proportional_coefficient">pref_key_rotor3_proportional_coefficient</string>-->
+    <!--<string name="pref_key_rotor3_integrative_coefficient">pref_key_rotor3_integrative_coefficient</string>-->
+    <!--<string name="pref_key_rotor3_derivative_coefficient">pref_key_rotor3_derivative_coefficient</string>-->
+
+    <!--<string name="pref_key_rotor4_proportional_coefficient">pref_key_rotor4_proportional_coefficient</string>-->
+    <!--<string name="pref_key_rotor4_integrative_coefficient">pref_key_rotor4_integrative_coefficient</string>-->
+    <!--<string name="pref_key_rotor4_derivative_coefficient">pref_key_rotor4_derivative_coefficient</string>-->
+
+    <string name="pref_key_atc_enable">pref_key_atc_enable</string>
+    <string name="pref_key_atc_proportional_coefficient">pref_key_atc_proportional_coefficient</string>
+    <string name="pref_key_atc_integrative_coefficient">pref_key_atc_integrative_coefficient</string>
+    <string name="pref_key_atc_derivative_coefficient">pref_key_atc_derivative_coefficient</string>
+
+    <string name="pref_key_hrc_enable">pref_key_hrc_enable</string>
+    <string name="pref_key_hrc_proportional_coefficient">pref_key_hrc_proportional_coefficient</string>
+    <string name="pref_key_hrc_integrative_coefficient">pref_key_hrc_integrative_coefficient</string>
+    <string name="pref_key_hrc_derivative_coefficient">pref_key_hrc_derivative_coefficient</string>
+
+    <string name="pref_key_alc_enable">pref_key_alc_enable</string>
+    <string name="pref_key_alc_proportional_coefficient">pref_key_alc_proportional_coefficient</string>
+    <string name="pref_key_alc_integrative_coefficient">pref_key_alc_integrative_coefficient</string>
+    <string name="pref_key_alc_derivative_coefficient">pref_key_alc_derivative_coefficient</string>
+
+    <string name="pref_title_enable_control">Habilitar controle</string>
+    <string name="pref_title_proportional_coefficient">Coeficiente proporcional</string>
+    <string name="pref_title_integrative_coefficient">Coeficiente integrativo</string>
+    <string name="pref_title_derivative_coefficient">Coeficiente derivativo</string>
+
+    <string name="pref_header_control_configurations">Configurações de controle</string>
+
+    <!-- Strings related to Connectivity Settings -->
+    <string name="pref_header_connectivity">Conectividade</string>
+
+    <string name="pref_key_act_as_client">act_as_client</string>
+    <string name="pref_title_act_as_client">Funcionar como cliente</string>
+    <string name="pref_description_act_as_client">Define se o dispositivo se comportará como cliente (controle remoto)
+        ou servidor (ligado ao quadrotor)</string>
+
+    <string name="pref_key_server_ipv4_address">server_ipv4</string>
+    <string name="pref_title_server_ipv4_address">IP do servidor</string>
+    <string name="pref_hint_dialog_server_ipv4">192.168.0.1</string>
+    <string name="pref_message_dialog_server_ipv4">Digite o IP do servidor</string>
+
+
+    <string name="pref_key_server_port">server_port</string>
+    <string name="pref_description_server_port">Digite a porta utilizada pelo servidor</string>
+    <string name="pref_title_server_port">Porta</string>
+
+    <!-- Strings related to Log Settings -->
+    <string name="pref_header_logs">Logs</string>
+
+    <string name="pref_key_enable_sensory_logs">enable_sensory_logs</string>
+    <string name="pref_title_enable_sensory_logs">Habilitar logs dos sensores</string>
+    <string name="pref_description_enable_sensory_logs">Habilitar logs dos interpretadores dos sensores</string>
+
+    <string name="pref_key_enable_device_tests_logs">enable_device_tests_logs</string>
+    <string name="pref_title_enable_device_tests_logs">Habilitar logs dos testes</string>
+    <string name="pref_description_enable_device_tests_logs">Habilitar logs dos testes de dispositivos</string>
+
+    <string name="pref_key_enable_rsc_logs">enable_rsc_logs</string>
+    <string name="pref_title_enable_rsc_logs">Habilitar logs do RSC</string>
+    <string name="pref_description_enable_rsc_logs">Habilitar logs do controlador de velocidade de rotação</string>
+
+    <string name="pref_key_enable_atc_logs">enable_atc_logs</string>
+    <string name="pref_title_enable_atc_logs">Habilitar logs do ATC</string>
+    <string name="pref_description_enable_atc_logs">Habilitar logs do controlador de atitude</string>
+
+    <string name="pref_key_enable_hrc_logs">enable_hrc_logs</string>
+    <string name="pref_title_enable_hrc_logs">Habilitar logs do HRC</string>
+    <string name="pref_description_enable_hrc_logs">Habilitar logs do controlador de rotação horizontal</string>
+
+    <string name="pref_key_enable_alc_logs">enable_alc_logs</string>
+    <string name="pref_title_enable_alc_logs">Habilitar logs do ALC</string>
+    <string name="pref_description_enable_alc_logs">Habilitar logs do controlador de altitude</string>
+
+
+    <string name="pref_key_log_path">log_path</string>
+    <string name="pref_title_log_path">Local dos logs</string>
+    <string name="pref_description_log_path">Local de armazenamento dos logs</string>
+    <string name="pref_log_path_default">Memória interna</string>
+    <string-array name="pref_log_path_titles">
+        <item>Memória interna</item>
+        <item>Cartão de memória</item>
+    </string-array>
+    <string-array name="pref_log_path_values">
+        <item>Memória interna</item>
+        <item>Cartão de memória</item>
+    </string-array>
+
+
+    <!-- Example General settings -->
+    <!--<string name="pref_header_general">General</string>-->
+
+    <!--<string name="pref_title_social_recommendations">Enable social recommendations</string>-->
+    <!--<string name="pref_description_social_recommendations">Recommendations for people to contact-->
+    <!--based on your message history-->
+    <!--</string>-->
+
+    <!--<string name="pref_title_display_name">Display name</string>-->
+    <!--<string name="pref_default_display_name">John Smith</string>-->
+
+    <!--<string name="pref_title_add_friends_to_messages">Add friends to messages</string>-->
+    <!--<string-array name="pref_example_list_titles">-->
+    <!--<item>Always</item>-->
+    <!--<item>When possible</item>-->
+    <!--<item>Never</item>-->
+    <!--</string-array>-->
+    <!--<string-array name="pref_example_list_values">-->
+    <!--<item>1</item>-->
+    <!--<item>0</item>-->
+    <!--<item>-1</item>-->
+    <!--</string-array>-->
+
+    <!-- Example settings for Data & Sync -->
+    <!--<string name="pref_header_data_sync">Data &amp; sync</string>-->
+
+    <!--<string name="pref_title_sync_frequency">Sync frequency</string>-->
+    <!--<string-array name="pref_sync_frequency_titles">-->
+    <!--<item>15 minutes</item>-->
+    <!--<item>30 minutes</item>-->
+    <!--<item>1 hour</item>-->
+    <!--<item>3 hours</item>-->
+    <!--<item>6 hours</item>-->
+    <!--<item>Never</item>-->
+    <!--</string-array>-->
+    <!--<string-array name="pref_sync_frequency_values">-->
+    <!--<item>15</item>-->
+    <!--<item>30</item>-->
+    <!--<item>60</item>-->
+    <!--<item>180</item>-->
+    <!--<item>360</item>-->
+    <!--<item>-1</item>-->
+    <!--</string-array>-->
+
+    <!--<string name="pref_title_system_sync_settings">System sync settings</string>-->
+
+    <!-- Example settings for Notifications -->
+    <!--<string name="pref_header_notifications">Notifications</string>-->
+
+    <!--<string name="pref_title_new_message_notifications">New message notifications</string>-->
+
+    <!--<string name="pref_title_ringtone">Ringtone</string>-->
+    <!--<string name="pref_ringtone_silent">Silent</string>-->
+
+    <!--<string name="pref_title_vibrate">Vibrate</string>-->
+    <!--<string name="button_ok">Ok</string>-->
+    <!--<string name="button_cancel">Cancelar</string>-->
+
+
+    <!-- Strings related to Manual control activity -->
+    <string name="title_activity_manual_control">Controle Manual</string>
+
+    <string name="button_connection_connect_vant">Conectar\na um VANT</string>
+    <string name="button_connection_disconnect_vant">Desconectar</string>
+
+    <string name="button_get_closer">Vir para\nperto</string>
+    <string name="dialog_message_get_closer">Trazendo VANT para perto</string>
+
+    <string name="button_lock_joystick_inclination_none">Travar joystick: SEM TRAVA</string>
+    <string name="button_lock_joystick_inclination_horizontal">Travar joystick: HORIZONTAL</string>
+    <string name="button_lock_joystick_inclination_vertical">Travar joystick: VERTICAL</string>
+
+    <string name="button_start_rotors">Ligar rotores</string>
+    <string name="button_stop_rotors">Desligar rotores</string>
+
+    <string name="button_emergency_stop">Parada de\nemergência</string>
+
+    <string name="dialog_title_emergency_stop">Parada de emergência</string>
+    <string name="dialog_message_emergency_stop">Deseja realmente parar o VANT?</string>
+    <string name="dialog_positive_message_emergency_stop">Realizando parada de emergência...</string>
+    <string name="dialog_negative_message_emergency_stop">Parada de emergência cancelada</string>
+
+    <string name="dialog_title_disconnect">Desconexão do VANT</string>
+    <string name="dialog_message_disconnect">Deseja realmente se desconectar do VANT?</string>
+    <string name="dialog_positive_message_disconnect">Desconexão em processo...</string>
+    <string name="dialog_negative_message_disconnect">Desconexão cancelada</string>
+
+    <!-- Strings related to Auto control activity -->
+    <string name="title_activity_auto_control">Controle Automático</string>
+
+    <!-- Strings related to peripheral item list -->
+    <string name="peripheral_name">Nome do periférico</string>
+    <string name="peripheral_description">Descrição do periférico</string>
+
+    <string name="peripheral_accelerometer">Acelerômetro</string>
+    <string name="peripheral_accelerometer_description">Mensura a aceleração linear</string>
+    <string-array name="peripheral_accelerometer_device_list">
+        <item>Externo</item>
+    </string-array>
+
+    <string name="peripheral_barometer">Barômetro</string>
+    <string name="peripheral_barometer_description">Mensura a pressão atmosférica</string>
+    <string-array name="peripheral_barometer_device_list">
+        <item>Externo</item>
+    </string-array>
+
+    <string name="peripheral_esc">ESC</string>
+    <string name="peripheral_esc_description">Controlador eletrônico de velocidade dos
+        motores</string>
+    <string-array name="peripheral_esc_device_list">
+        <item>Rotor 1</item>
+        <item>Rotor 2</item>
+        <item>Rotor 3</item>
+        <item>Rotor 4</item>
+    </string-array>
+
+    <string name="peripheral_gyroscope">Giroscópio</string>
+    <string name="peripheral_gyroscope_description">Mensura a velocidade angular</string>
+    <string-array name="peripheral_gyroscope_device_list">
+        <item>Externo</item>
+    </string-array>
+
+    <string name="peripheral_long_range_communicator">Comunicador de longa distância</string>
+    <string name="peripheral_long_range_communicator_description">Comunicador de longa
+        distância via rádio</string>
+    <string-array name="peripheral_long_range_communicator_device_list">
+        <item>Externo</item>
+    </string-array>
+
+    <string name="peripheral_magnetometer">Magnetômetro</string>
+    <string name="peripheral_magnetometer_description">Mensura a intensidade e direção de campos
+        eletromagnéticos</string>
+    <string-array name="peripheral_magnetometer_device_list">
+        <item>Externo</item>
+    </string-array>
+
+    <string name="peripheral_tachometer">Tacômetro</string>
+    <string name="peripheral_tachometer_description">Mensura a velocidade de rotação dos
+        rotores</string>
+    <string-array name="peripheral_tachometer_device_list">
+        <item>Rotor 1</item>
+        <item>Rotor 2</item>
+        <item>Rotor 3</item>
+        <item>Rotor 4</item>
+    </string-array>
+
+    <string name="peripheral_sonar">Sonar</string>
+    <string name="peripheral_sonar_description">Mensura a distância de objetos baseado em reflexão de
+        ultrassom</string>
+    <string-array name="peripheral_sonar_device_list">
+        <item>Leste</item>
+        <item>Nordeste</item>
+        <item>Norte</item>
+        <item>Noroeste</item>
+        <item>Oeste</item>
+        <item>Sudoeste</item>
+        <item>Sul</item>
+        <item>Sudeste</item>
+        <item>Cima</item>
+        <item>Baixo</item>
+    </string-array>
+
+    <!-- Strings related to Devices tests activity -->
+    <string name="title_activity_devices_tests">Testes de dispositivos</string>
+    <string name="deviceSelect">Selecione o dispositivo</string>
+
+    <string name="sensorReading">Leitura do dispositivo</string>
+    <string name="actuatorTarget">Alvo do atuador</string>
+
+    <string name="devicesConfigurationChangedMessage">Configurações dos dispositivos foram alteradas. O
+        aplicativo precisa ser reiniciado e o cabo da IOIO reconectado.</string>
+    <string name="locationPermissionsDeniedMessage">Todas as permissões de acesso à localização devem ser
+        concedidas.</string>
+    <string name="externalStorageWritePermissionDeniedMessage">A permissão de escrita de arquivos deve ser concedida para salvar os
+        logs!</string>
+
+    <!-- Strings related to AltitudeControlService -->
+    <string name="logTag_controlService_alc">[ALC]</string>
+    <string name="measurementUnit_alc_input_throttle_percent">T[%]</string>
+    <string name="measurementUnit_alc_input_desiredRelativeAltitude_meters">SP H[m]</string>
+    <string name="measurementUnit_alc_input_currentRelativeAltitude_meters">PV H[m]</string>
+    <string name="measurementUnit_alc_output_controlVariable_pulseWidth_microsecs">CV H[µsec]</string>
+
+    <string name="measurementUnit_alc_output_rotor1_pulseWidth_microsecs">R1[µsec]</string>
+    <string name="measurementUnit_alc_output_rotor2_pulseWidth_microsecs">R2[µsec]</string>
+    <string name="measurementUnit_alc_output_rotor3_pulseWidth_microsecs">R3[µsec]</string>
+    <string name="measurementUnit_alc_output_rotor4_pulseWidth_microsecs">R4[µsec]</string>
+
+    <!-- Strings related to AttitudeControlService -->
+    <string name="logTag_controlService_atc">[ATC]</string>
+    <string name="measurementUnit_atc_input_throttle_percent">T[%]</string>
+    <string name="measurementUnit_atc_input_desiredAxisRotationX_degrees">SP X[°]</string>
+    <string name="measurementUnit_atc_input_currentAxisRotationX_degrees">PV X[°]</string>
+    <string name="measurementUnit_atc_output_controlVariableX_pulseWidth_microsecs">CV X[µsec]</string>
+
+    <string name="measurementUnit_atc_input_desiredAxisRotationY_degrees">SP Y[°]</string>
+    <string name="measurementUnit_atc_input_currentAxisRotationY_degrees">PV Y[°]</string>
+    <string name="measurementUnit_atc_output_controlVariableY_pulseWidth_microsecs">CV Y[µsec]</string>
+
+    <string name="measurementUnit_atc_output_xPositiveRegion_pulseWidth_microsecs">PR X[µsec]</string>
+    <string name="measurementUnit_atc_output_xNegativeRegion_pulseWidth_microsecs">NR X[µsec]</string>
+    <string name="measurementUnit_atc_output_yPositiveRegion_pulseWidth_microsecs">PR Y[µsec]</string>
+    <string name="measurementUnit_atc_output_yNegativeRegion_pulseWidth_microsecs">NR Y[µsec]</string>
+
+    <string name="measurementUnit_atc_output_rotor1_pulseWidth_microsecs">R1[µsec]</string>
+    <string name="measurementUnit_atc_output_rotor2_pulseWidth_microsecs">R2[µsec]</string>
+    <string name="measurementUnit_atc_output_rotor3_pulseWidth_microsecs">R3[µsec]</string>
+    <string name="measurementUnit_atc_output_rotor4_pulseWidth_microsecs">R4[µsec]</string>
+
+    <!-- Strings related to HorizontalRotationControlService -->
+    <string name="logTag_controlService_hrc">[HRC]</string>
+    <string name="measurementUnit_hrc_input_throttle_percent">T[%]</string>
+    <string name="measurementUnit_hrc_input_desiredRotationAngle_degrees">SP Z[°]</string>
+    <string name="measurementUnit_hrc_input_currentRotationAngle_degrees">PV Z[°]</string>
+    <string name="measurementUnit_hrc_output_controlVariable_pulseWidth_microsecs">CV Z[µsec]</string>
+
+    <string name="measurementUnit_hrc_output_clockwiseRotation_pulseWidth_microsecs">CW[µsec]</string>
+    <string name="measurementUnit_hrc_output_counterClockwiseRotation_pulseWidth_microsecs">CCW[µsec]</string>
+
+    <string name="measurementUnit_hrc_output_rotor1_pulseWidth_microsecs">R1[µsec]</string>
+    <string name="measurementUnit_hrc_output_rotor2_pulseWidth_microsecs">R2[µsec]</string>
+    <string name="measurementUnit_hrc_output_rotor3_pulseWidth_microsecs">R3[µsec]</string>
+    <string name="measurementUnit_hrc_output_rotor4_pulseWidth_microsecs">R4[µsec]</string>
+
+    <!-- Strings related to RotorSpeedControlService -->
+    <string name="logTag_controlService_rsc">[RSC]</string>
+    <string name="measurementUnit_rsc_input_throttle_percent">T[%]</string>
+    <string name="measurementUnit_rsc_input_rotor1_desiredRotationSpeed_rpm">SP 1[RPM]</string>
+    <string name="measurementUnit_rsc_input_rotor1_currentRotationSpeed_rpm">PV 1[RPM]</string>
+    <string name="measurementUnit_rsc_output_rotor1_controlVariable_microsecs">CV 1[µsec]</string>
+
+    <string name="measurementUnit_rsc_input_rotor2_desiredRotationSpeed_rpm">SP 2[RPM]</string>
+    <string name="measurementUnit_rsc_input_rotor2_currentRotationSpeed_rpm">PV 2[RPM]</string>
+    <string name="measurementUnit_rsc_output_rotor2_controlVariable_microsecs">CV 2[µsec]</string>
+
+    <string name="measurementUnit_rsc_input_rotor3_desiredRotationSpeed_rpm">SP 3[RPM]</string>
+    <string name="measurementUnit_rsc_input_rotor3_currentRotationSpeed_rpm">PV 3[RPM]</string>
+    <string name="measurementUnit_rsc_output_rotor3_controlVariable_microsecs">CV 3[µsec]</string>
+
+    <string name="measurementUnit_rsc_input_rotor4_desiredRotationSpeed_rpm">SP 4[RPM]</string>
+    <string name="measurementUnit_rsc_input_rotor4_currentRotationSpeed_rpm">PV 4[RPM]</string>
+    <string name="measurementUnit_rsc_output_rotor4_controlVariable_microsecs">CV 4[µsec]</string>
+
+    <string name="measurementUnit_rsc_output_rotor1_pulseWidth_microsecs">R1[µsec]</string>
+    <string name="measurementUnit_rsc_output_rotor2_pulseWidth_microsecs">R2[µsec]</string>
+    <string name="measurementUnit_rsc_output_rotor3_pulseWidth_microsecs">R3[µsec]</string>
+    <string name="measurementUnit_rsc_output_rotor4_pulseWidth_microsecs">R4[µsec]</string>
+
+    <string name="logTag_rotations_pulseWidthMicrosecs_rotor1">R1[µsec]</string>
+    <string name="logTag_rotations_pulseWidthMicrosecs_rotor2">R2[µsec]</string>
+    <string name="logTag_rotations_pulseWidthMicrosecs_rotor3">R3[µsec]</string>
+    <string name="logTag_rotations_pulseWidthMicrosecs_rotor4">R4[µsec]</string>
+
+    <!-- Strings related to Tests executor activity -->
+    <string name="title_activity_tests_executor">TestsExecutorActivity</string>
+
+    <string name="test_description">Pressione para visualizar a descrição</string>
+
+    <string name="passiveTest">Teste passivo</string>
+    <string name="dialog_message_passiveTest">Simplesmente colhe os sinais do sensor selecionado
+        e os interpreta.</string>
+    <string name="activeTest">Teste ativo</string>
+    <string name="dialog_message_activeTest">Um atuador, relacionado ao dispositivo selecionado, é
+        acionado com um valor padrão. Então são colhidos os sinais do sensor selecionado e os
+        interpreta.</string>
+
+    <string name="activeTestType">Selecione o tipo de teste ativo</string>
+    <string-array name="activeTestType_list">
+        <item>Curva de aceleração</item>
+        <item>Função porta</item>
+        <item>Triângulo</item>
+        <item>Variando</item>
+    </string-array>
+    <!--<string name="abruptTest">Teste abrupto</string>-->
+
+    <string name="graphAxisLabel_signalAmplitude">Amplitude do sinal</string>
+    <string name="graphAxisLabel_measurementId">Identificador da medida</string>
+
+    <string name="graphAxisLabel_xAxisMonitored">Eixo X</string>
+    <string name="graphAxisLabel_yAxisMonitored">Eixo Y</string>
+    <string name="graphAxisLabel_zAxisMonitored">Eixo Z</string>
+    <string name="logTag_axis_x">X</string>
+    <string name="logTag_axis_y">Y</string>
+    <string name="logTag_axis_z">Z</string>
+    <string name="logTag_compass_heading">Direção</string>
+
+    <string name="measurementUnit_acceleration_metersPerSecSquared">Aceleração[m/s²]</string>
+    <string name="measurementUnit_acceleration_metersPerSecSquared_compact">[m/s²]</string>
+    <string name="measurementUnit_acceleration_Gs">Aceleração[G]</string>
+
+    <string name="measurementUnit_angularSpeed_degreesPerSec">Velocidade angular[°/s]</string>
+    <string name="measurementUnit_angularSpeed_degreesPerSec_compact">[°/s]</string>
+
+    <string name="measurementUnit_axisRotation_degrees">[°]</string>
+
+    <string name="measurementUnit_magneticField_gauss">Campo Magnético[Ga]</string>
+    <string name="measurementUnit_magneticField_teslas">Campo Magnético[T]</string>
+    <string name="measurementUnit_magneticField_microTeslas">Campo Magnético[µT]</string>
+    <string name="measurementUnit_magneticField_microTeslas_compact">[µT]</string>
+
+    <string name="measurementUnit_pressure_pascals">Pressão atmosférica[Pa]</string>
+    <string name="measurementUnit_pressure_hectoPascals">Pressão atmosférica[hPa]</string>
+    <string name="measurementUnit_pressure_hectoPascals_compact">[hPa]</string>
+    <string name="measurementUnit_temperature_celsius_compact">[°C]</string>
+    <string name="measurementUnit_altitude_meters_compact">[m]</string>
+
+    <string name="logTag_relative_altitude">Rel</string>
+    <string name="logTag_absolute_altitude">Abs</string>
+
+    <string name="logTag_distance_centimeters_east">E[cm]</string>
+    <string name="logTag_distance_centimeters_northeast">NE[cm]</string>
+    <string name="logTag_distance_centimeters_north">N[cm]</string>
+    <string name="logTag_distance_centimeters_northwest">NW[cm]</string>
+    <string name="logTag_distance_centimeters_west">W[cm]</string>
+    <string name="logTag_distance_centimeters_southwest">SW[cm]</string>
+    <string name="logTag_distance_centimeters_south">S[cm]</string>
+    <string name="logTag_distance_centimeters_southeast">SE[cm]</string>
+    <string name="logTag_distance_centimeters_up">Up[cm]</string>
+    <string name="logTag_distance_centimeters_down">Down[cm]</string>
+    <string name="measurementUnit_distance_inches">Distância["]</string>
+    <string name="measurementUnit_distance_centimeters">Distância[cm]</string>
+    <string name="measurementUnit_distance_centimeters_compact">[cm]</string>
+
+    <string name="logTag_rotations_rotationsPerMinute_rotor1">R1[RPM]</string>
+    <string name="logTag_rotations_rotationsPerMinute_rotor2">R2[RPM]</string>
+    <string name="logTag_rotations_rotationsPerMinute_rotor3">R3[RPM]</string>
+    <string name="logTag_rotations_rotationsPerMinute_rotor4">R4[RPM]</string>
+    <string name="measurementUnit_rotations_rotationsPerMinute">Rotação[RPM]</string>
+    <string name="measurementUnit_rotations_rotationsPerMinute_compact">[RPM]</string>
+    <string name="measurementUnit_rotations_hertz">Rotação[Hz]</string>
+
+    <!--<string name="dummy_content">DUMMY\nCONTENT</string>-->
+
+    <!-- Strings related to cardinals -->
+    <string name="cardinal_north_abbreviation">N</string>
+    <string name="cardinal_northeast_abbreviation">NE</string>
+    <string name="cardinal_east_abbreviation">E</string>
+    <string name="cardinal_southeast_abbreviation">SE</string>
+    <string name="cardinal_south_abbreviation">S</string>
+    <string name="cardinal_southwest_abbreviation">SW</string>
+    <string name="cardinal_west_abbreviation">W</string>
+    <string name="cardinal_northwest_abbreviation">NW</string>
+
+    <!-- Strings related to axis -->
+    <string name="pitch">arfagem</string>
+    <string name="roll">rolamento</string>
+    <string name="yaw">guinada</string>
+    <string name="inputs_from_controller">T: 0.0, X: 0.0\nY: 0.0, Z: 0.0</string>
+
+    <!-- Strings related to rotorId -->
+    <string name="rotor1_id">rotor1</string>
+    <string name="rotor2_id">rotor2</string>
+    <string name="rotor3_id">rotor3</string>
+    <string name="rotor4_id">rotor4</string>
+</resources>

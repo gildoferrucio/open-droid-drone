@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:sample="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:key="pref_key_fused_sensors"
+        android:title="@string/pref_category_title_fused_sensors">
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="9800"
+            android:enabled="true"
+            android:key="@string/pref_key_alpha_attitude_sensor"
+            android:summary="@string/pref_description_alpha_attitude_sensor"
+            android:title="@string/pref_title_alpha_attitude_sensor"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="10000"
+            sample:msbp_measurementUnit="/10000"
+            sample:msbp_minValue="0"
+            />
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="9800"
+            android:enabled="true"
+            android:key="@string/pref_key_alpha_horizontal_rotation_sensor"
+            android:summary="@string/pref_description_alpha_horizontal_rotation_sensor"
+            android:title="@string/pref_title_alpha_horizontal_rotation_sensor"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="10000"
+            sample:msbp_measurementUnit="/10000"
+            sample:msbp_minValue="0"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_key_sensors_pre_processing"
+        android:title="@string/pref_category_title_sensors_pre_processing">
+
+        <SwitchPreference
+            android:enabled="false"
+            android:defaultValue="false"
+            android:key="@string/pref_key_lpf_accelerometer_enable"
+            android:summary="@string/pref_description_lpf_accelerometer_enable"
+            android:title="@string/pref_title_lpf_accelerometer_enable"/>
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="5000"
+            android:enabled="false"
+            android:key="@string/pref_key_alpha_lpf_accelerometer"
+            android:summary="@string/pref_description_alpha_lpf_accelerometer"
+            android:title="@string/pref_title_alpha_lpf_accelerometer"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="10000"
+            sample:msbp_measurementUnit="/10000"
+            sample:msbp_minValue="0"
+            />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_gyroscope_remove_offset_enable"
+            android:summary="@string/pref_description_gyroscope_remove_offset_enable"
+            android:title="@string/pref_title_gyroscope_remove_offset_enable"/>
+
+        <SwitchPreference
+            android:enabled="false"
+            android:defaultValue="false"
+            android:key="@string/pref_key_hpf_gyroscope_enable"
+            android:summary="@string/pref_description_hpf_gyroscope_enable"
+            android:title="@string/pref_title_hpf_gyroscope_enable"/>
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="5000"
+            android:enabled="false"
+            android:key="@string/pref_key_alpha_hpf_gyroscope"
+            android:summary="@string/pref_description_alpha_hpf_gyroscope"
+            android:title="@string/pref_title_alpha_hpf_gyroscope"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="10000"
+            sample:msbp_measurementUnit="/10000"
+            sample:msbp_minValue="0"
+            />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_magnetometer_remove_offset_enable"
+            android:summary="@string/pref_description_magnetometer_remove_offset_enable"
+            android:title="@string/pref_title_magnetometer_remove_offset_enable"/>
+
+        <SwitchPreference
+            android:enabled="false"
+            android:defaultValue="false"
+            android:key="@string/pref_key_lpf_magnetometer_enable"
+            android:summary="@string/pref_description_lpf_magnetometer_enable"
+            android:title="@string/pref_title_lpf_magnetometer_enable"/>
+
+        <com.pavelsikun.seekbarpreference.SeekBarPreference
+            android:defaultValue="5000"
+            android:enabled="false"
+            android:key="@string/pref_key_alpha_lpf_magnetometer"
+            android:summary="@string/pref_description_alpha_lpf_magnetometer"
+            android:title="@string/pref_title_alpha_lpf_magnetometer"
+            sample:msbp_interval="1"
+            sample:msbp_maxValue="10000"
+            sample:msbp_measurementUnit="/10000"
+            sample:msbp_minValue="0"
+            />
+
+        <!--<SwitchPreference-->
+            <!--android:defaultValue="true"-->
+            <!--android:key="@string/pref_key_maf_tachometer_enable"-->
+            <!--android:summary="@string/pref_description_maf_tachometer_enable"-->
+            <!--android:title="@string/pref_title_maf_tachometer_enable"/>-->
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_key_escs"
+        android:title="@string/pref_category_title_escs">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_esc1_enable"
+            android:summary="@string/pref_description_esc_enable"
+            android:title="@string/pref_title_esc1_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_esc2_enable"
+            android:summary="@string/pref_description_esc_enable"
+            android:title="@string/pref_title_esc2_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_esc3_enable"
+            android:summary="@string/pref_description_esc_enable"
+            android:title="@string/pref_title_esc3_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_esc4_enable"
+            android:summary="@string/pref_description_esc_enable"
+            android:title="@string/pref_title_esc4_enable"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_key_tachometers"
+        android:title="@string/pref_category_title_tachometers">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_tachometer1_enable"
+            android:summary="@string/pref_description_tachometer_enable"
+            android:title="@string/pref_title_tachometer1_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_tachometer2_enable"
+            android:summary="@string/pref_description_tachometer_enable"
+            android:title="@string/pref_title_tachometer2_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_tachometer3_enable"
+            android:summary="@string/pref_description_tachometer_enable"
+            android:title="@string/pref_title_tachometer3_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_tachometer4_enable"
+            android:summary="@string/pref_description_tachometer_enable"
+            android:title="@string/pref_title_tachometer4_enable"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_key_sonars"
+        android:title="@string/pref_category_title_sonars">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_sonarE_enable"
+            android:summary="@string/pref_description_sonar_enable"
+            android:title="@string/pref_title_sonarE_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_sonarNE_enable"
+            android:summary="@string/pref_description_sonar_enable"
+            android:title="@string/pref_title_sonarNE_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_sonarN_enable"
+            android:summary="@string/pref_description_sonar_enable"
+            android:title="@string/pref_title_sonarN_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_sonarNW_enable"
+            android:summary="@string/pref_description_sonar_enable"
+            android:title="@string/pref_title_sonarNW_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_sonarW_enable"
+            android:summary="@string/pref_description_sonar_enable"
+            android:title="@string/pref_title_sonarW_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_sonarSW_enable"
+            android:summary="@string/pref_description_sonar_enable"
+            android:title="@string/pref_title_sonarSW_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_sonarS_enable"
+            android:summary="@string/pref_description_sonar_enable"
+            android:title="@string/pref_title_sonarS_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_sonarSE_enable"
+            android:summary="@string/pref_description_sonar_enable"
+            android:title="@string/pref_title_sonarSE_enable"/>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_sonarUp_enable"
+            android:summary="@string/pref_description_sonar_enable"
+            android:title="@string/pref_title_sonarUp_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_sonarDown_enable"
+            android:summary="@string/pref_description_sonar_enable"
+            android:title="@string/pref_title_sonarDown_enable"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_key_inertial_sensors"
+        android:title="@string/pref_category_title_inertial_sensors">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_barometer_enable"
+            android:summary="@string/pref_description_barometer_enable"
+            android:title="@string/pref_title_barometer_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_accelerometer_enable"
+            android:summary="@string/pref_description_accelerometer_enable"
+            android:title="@string/pref_title_accelerometer_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_gyroscope_enable"
+            android:summary="@string/pref_description_gyroscope_enable"
+            android:title="@string/pref_title_gyroscope_enable"/>
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_magnetometer_enable"
+            android:summary="@string/pref_description_magnetometer_enable"
+            android:title="@string/pref_title_magnetometer_enable"/>
+    </PreferenceCategory>
+</PreferenceScreen>
