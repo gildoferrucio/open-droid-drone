@@ -1,0 +1,5 @@
+Nome:		XBee-PRO DigiMesh 900 extended range module w/ RPSMA connector
+PartNumber: 	XBP09-DMSIT-156
+
+Interface de Communicação: 	USART
+Modo de configuração:		AT commands & API, local or over-the-air

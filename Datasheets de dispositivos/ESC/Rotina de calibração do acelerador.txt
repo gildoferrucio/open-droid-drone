@@ -1,0 +1,13 @@
+Procedimento de calibração dos ESCs
+
+1. remover as hélices do motores;
+2. conectar o ESC a ser calibrado no seu respectivo motor;
+3. desconectar o ESC da alimentação;
+4. colocar o acelerador no máximo;
+5. conectar o ESC na alimentação;
+6. após escutar os bipes de bateria e de indicação de início da calibração, colocar o acelerador no ponto mínimo;
+
+Referências: 
+http://aeroquad.com/showwiki.php?title=Calibrating-the-ESCs
+https://www.youtube.com/watch?v=cj7yLk41kwY
+https://www.youtube.com/watch?v=OOplk52R4no

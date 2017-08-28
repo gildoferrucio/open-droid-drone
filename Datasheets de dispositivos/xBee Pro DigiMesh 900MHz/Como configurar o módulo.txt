@@ -1,0 +1,22 @@
+====== Programa utilizado para comunicação ======
+Recomenda-se utilizar: 'Advanced Serial Port Terminal' ou 'TeraTerm'.
+Obs.: O 'Putty' não é adqueado, pois tudo que é digitado é automaticamente enviado.
+
+====== Configuração da UART: ======
+Configuração padrão é: 9600 8N1
+
+====== Como entrar em modo de comandos AT ======
+Envie a string "+++" e dê enter no terminal,
+se funcionar o módulo vai responder "OK\n" {0x4F, 0x4B, 0x0D} após cerca de 1 segundo.
+
+====== Sintaxe dos comandos AT: ======
+
+"AT"	   ASCII      Espaço      Parâmetro				'\r'
+Prefixo + Comando + (Opcional)+	(Opcional, em Hexa)	+ (Carriage Return)
+
+Exemplo: ATDL 1F<CR>
+
+
+
+
+http://www.faludi.com/projects/common-xbee-mistakes/
